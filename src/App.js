@@ -46,22 +46,40 @@ class App extends React.Component {
           return translatedWordsArray.push(currentWord + symbol);
       }
       //if no vowels but a y
-      else if(!currentWord.includes("a") &&
-            !currentWord.includes("e") &&
-            !currentWord.includes("i") &&
-            !currentWord.includes("o") &&
-            !currentWord.includes("u"))
-      {
+      // else if(!currentWord.includes("a") &&
+      //       !currentWord.includes("e") &&
+      //       !currentWord.includes("i") &&
+      //       !currentWord.includes("o") &&
+      //       !currentWord.includes("u"))
+      // {
+      //     for(let i = 0; i < currentWord.length; i++){
+      //         if(currentWord[i] === "y"){
+      //             currentWord = currentWord.slice(i, currentWord.length) + currentWord.slice(0, i) + "ay";
+      //             return translatedWordsArray.push(currentWord + symbol);
+      //         }
+      //     }
+      // } else {
+      //     //console.log("test"+currentWord)
+      //     for(let i=0;i<currentWord.length;i++){
+      //         if("q".includes(currentWord[i])){
+      //             if("u".includes(currentWord[i+1])){
+      //                 currentWord = currentWord.slice(i+2, currentWord.length) + currentWord.slice(0, i+2) + "ay"
+      //                 return translatedWordsArray.push(currentWord + symbol);
+      //             }
+      //         }
+      //         else if(vowel.includes(currentWord[i])){
+      //             currentWord = currentWord.slice(i, currentWord.length) + currentWord.slice(0, i) + "ay"
+      //             return translatedWordsArray.push(currentWord + symbol);
+      //         }
+      //     }
+      // }
+      else {
           for(let i = 0; i < currentWord.length; i++){
-              if(currentWord[i] === "y"){
+              if(currentWord[i] === "y" && i != 0){
                   currentWord = currentWord.slice(i, currentWord.length) + currentWord.slice(0, i) + "ay";
                   return translatedWordsArray.push(currentWord + symbol);
               }
-          }
-      } else {
-          //console.log("test"+currentWord)
-          for(let i=0;i<currentWord.length;i++){
-              if("q".includes(currentWord[i])){
+              else if("q".includes(currentWord[i])){
                   if("u".includes(currentWord[i+1])){
                       currentWord = currentWord.slice(i+2, currentWord.length) + currentWord.slice(0, i+2) + "ay"
                       return translatedWordsArray.push(currentWord + symbol);
