@@ -1,0 +1,60 @@
+body{
+  margin: 2em;
+  font-family: 'Josefin Sans', sans-serif;
+  align-items: center;
+  text-align: center;
+}
+h1{
+  text-align: center;
+  font-size: 4em;
+  font-family: Oswald,sans-serif;
+  color: #EA2CB9;
+}
+button{
+  margin: 1em;
+  border-radius: .25em;
+  font-size: 75%;
+  padding: 1em;
+  transition: 1s;
+  font-family: Oswald;
+}
+button:hover{
+  margin: 1em;
+  border-radius: .25em;
+  font-size: 75%;
+  padding: 1em;
+  background-color: black;
+  color:white;
+  border-color: black;
+  font-family: oswald;
+}
+footer{
+  padding: 2em;
+  font-family: Montserrat;
+}
+
+#butcherPig{
+  width: 12em;
+  }
+#pigImage{
+  text-align: center;
+}
+#inputPhrase{
+  font-size: 1em;
+  height: 5em;
+  width: 20em;
+  text-align: center;
+  font-family: Montserrat;
+}
+
+.box{
+  background-color: #267865;
+  color: #fff;
+  border-radius: .2em;
+  padding: 1em;
+  font-size: 150%;
+}
+.header{
+  background-color: #FFF;
+  padding: 1em;
+}
